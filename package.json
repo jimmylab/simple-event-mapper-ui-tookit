@@ -1,0 +1,18 @@
+{
+    "name": "com.jimmylab.simple-event-mapper",
+    "version": "0.0.1",
+    "displayName": "SimpleEventMapper",
+    "description": "Simple event mapper for UI Toolkit",
+    "unity": "2022.2",
+    "documentationUrl": "https://jimmylab.net/",
+    "dependencies": {
+        "com.jimmylab.dom-util": "0.0.1"
+    },
+    "keywords": [
+    ],
+    "author": {
+        "name": "Jimmy Liu",
+        "email": "webmaster@jimmylab.net",
+        "url": "https://jimmylab.net/"
+    }
+}

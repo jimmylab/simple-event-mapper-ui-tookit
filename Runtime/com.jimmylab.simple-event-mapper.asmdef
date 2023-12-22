@@ -1,0 +1,16 @@
+{
+    "name": "com.jimmylab.simple-event-mapper",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a41470a977e0afc40922fe3788ddbe04"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

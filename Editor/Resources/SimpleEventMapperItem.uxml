@@ -1,0 +1,27 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="SimpleEventMapperStyles.uss" />
+    <ui:BindableElement focusable="true" name="event-item" class="event-item">
+        <ui:Label text="≡" name="reorder-handler" />
+        <ui:VisualElement name="event-item__controls">
+            <ui:VisualElement class="row">
+                <ui:Toggle name="enabled" text="On" class="row-item-narrow" binding-path="enabled" value="true" />
+                <ui:DropdownField name="event-item__event-name" binding-path="eventName" class="row-item condition-disable" choices="Mouse and Pointer/Pointer/PointerDown,Mouse and Pointer/Pointer/PointerUp,Mouse and Pointer/Pointer/PointerMove,Mouse and Pointer/Pointer/PointerCapture,Mouse and Pointer/Pointer/PointerCaptureOut,Mouse and Pointer/Pointer/PointerEnter,Mouse and Pointer/Pointer/PointerLeave,Mouse and Pointer/Pointer/PointerOver,Mouse and Pointer/Pointer/PointerOut,Mouse and Pointer/Pointer/PointerCancel,Mouse and Pointer/Pointer/PointerStationary,Mouse and Pointer/Mouse/MouseDown,Mouse and Pointer/Mouse/MouseUp,Mouse and Pointer/Mouse/MouseMove,Mouse and Pointer/Mouse/MouseCaptureOut,Mouse and Pointer/Mouse/MouseCapture,Mouse and Pointer/Mouse/MouseEnter,Mouse and Pointer/Mouse/MouseLeave,Mouse and Pointer/Mouse/MouseOver,Mouse and Pointer/Mouse/MouseOut,Mouse and Pointer/Mouse/MouseEnterWindow,Mouse and Pointer/Mouse/MouseLeaveWindow,Mouse and Pointer/Click,Mouse and Pointer/Wheel,Drag/DragExited,Drag/DragEnter,Drag/DragLeave,Drag/DragUpdated,Drag/DragPerform,Focus/FocusOut,Focus/Blur,Focus/FocusIn,Focus/Focus,Keybord Input/Input,Keybord Input/KeyDown,Keybord Input/KeyUp,Keybord Input/NavigationMove,Keybord Input/NavigationCancel,Keybord Input/NavigationSubmit,Style and Hierarchy/GeometryChanged,Style and Hierarchy/AttachToPanel,Style and Hierarchy/DetachFromPanel,Style and Hierarchy/CustomStyleResolved,Style and Hierarchy/TransitionRun,Style and Hierarchy/TransitionStart,Style and Hierarchy/TransitionEnd,Style and Hierarchy/TransitionCancel,Editor/IMGUI,Editor/ValidateCommand,Editor/ExecuteCommand,Editor/Tooltip,Editor/ContextualMenuPopulate" />
+            </ui:VisualElement>
+            <ui:VisualElement class="row condition-disable">
+                <ui:EnumField name="select-by" binding-path="selectBy" type="EventMapperItem+SelectorType, com.jimmylab.simple-event-mapper" value="Selector" class="row-item-narrow min-caption" />
+                <ui:TextField name="selector" binding-path="selector" placeholder-text="Selector" class="row-item" />
+                <ui:Toggle name="mono-select" binding-path="monoSelect" text="Mono" class="row-item-narrow" />
+            </ui:VisualElement>
+            <ui:VisualElement class="row condition-disable">
+                <ui:Label text="Action: " class="row-item-narrow" />
+                <uie:ObjectField type="UnityEngine.GameObject, UnityEngine.CoreModule" name="targetObj" binding-path="targetObj" class="row-item no-grow" style="max-height: 40px;" />
+                <!-- <ui:DropdownField name="func" binding-path="funcName" choices="Do Nothing, /, MyComponent1/MyMethod1(), MyComponent2/MyMethod2()" class="row-item" /> -->
+                <XDropdown name="func-dropdown" class="row-item" binding-path="funcName" />
+            </ui:VisualElement>
+            <!-- <ui:VisualElement class="row condition-disable">
+                <ui:Label text="Test: " class="row-item-narrow" />
+                <XDropdown name="func-dropdown" class="row-item" value="MyComponent1/Static" />
+            </ui:VisualElement> -->
+        </ui:VisualElement>
+    </ui:BindableElement>
+</ui:UXML>

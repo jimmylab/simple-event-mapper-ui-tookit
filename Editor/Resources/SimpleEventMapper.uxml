@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.jimmylab.simple-event-mapper/Editor/SimpleEventMapperStyles.uss?fileID=7433441132597879392&amp;guid=33c5e68e187f4a24dac08ea9962a9d04&amp;type=3#SimpleEventMapperStyles" />
+    <ui:HelpBox message-type="Info" text="Do not use SimpleEventMapper under production, since it heavily relies on reflection, which may not available in AOT runtime, and lead to performance issues as well." />
+    <ui:VisualElement name="event-list">
+        <ui:VisualElement name="event-list__wrapper">
+            <!-- <Template name="EventItem" src="SimpleEventMapperItem.uxml" />
+            <ui:Instance template="EventItem" />
+            <ui:Instance template="EventItem" />
+            <ui:Instance template="EventItem" /> -->
+        </ui:VisualElement>
+        <ui:VisualElement name="event-list__overlay" class="event-item"></ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="unity-list-view__footer" class="unity-list-view__footer">
+        <ui:Button name="unity-list-view__remove-button" text="-" class="unity-text-element unity-button" />
+        <ui:Button name="unity-list-view__add-button" text="+" class="unity-text-element unity-button" />
+    </ui:VisualElement>
+    <ui:Foldout text="Default Inspector" name="default-inspector" value="false" />
+</ui:UXML>
